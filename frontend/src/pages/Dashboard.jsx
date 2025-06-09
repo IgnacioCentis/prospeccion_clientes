@@ -5,6 +5,8 @@ import api from '../services/api';
 import FileUpload from '../components/FileUpload';
 import LeadsTable from '../components/LeadsTable';
 import { Eye, Mail, Loader } from 'lucide-react'; // <-- importamos Loader
+import logo from '../assets/logo.png';
+
 
 export default function Dashboard() {
   const { logout } = useAuth();
@@ -98,6 +100,7 @@ export default function Dashboard() {
     <div className="p-8 bg-gray-100 min-h-screen">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
+        <img src={logo} alt="Logo" className="w-20 h-20" />
         <h1 className="text-3xl">Prospector de ventas </h1>
         <button
           onClick={logout}
@@ -111,7 +114,7 @@ export default function Dashboard() {
       <FileUpload onUpload={loadLeads} />
 
       {/* Botones con loader */}
-      <div className="mb-4 space-x-2">
+      <div className="mb-4 flex space-x-2">
         <button
           onClick={onScrape}
           disabled={loadingScrape || loadingGenerate}
