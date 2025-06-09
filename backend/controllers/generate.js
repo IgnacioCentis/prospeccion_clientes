@@ -14,7 +14,10 @@ async function generateEmails(req, res) {
 
     for (const lead of rows) {
       try {
-        const prompt = `Redactá un email profesional y breve para contactar a la tienda ${lead.url}, ofreciendo un demo gratuito de nuestra solución de automatización para ecommerce.`;
+        const prompt = `Analiza la tienda ecommerce  realizadno scraping a ${lead.url},
+                        y redacta un breve y profesional email enfocado en su tienda y modelo de negocio, 
+                        ofreciendo un demo gratuito de nuestra sistema Data To Action https://data2action.ai/
+                        Recuerda que el fin de esta demo es que contraten nuestros servicios de Analitica Digital con Data To Action`;
         const completion = await openai.chat.completions.create({
           model: 'gpt-4',
           messages: [{ role: 'user', content: prompt }]
