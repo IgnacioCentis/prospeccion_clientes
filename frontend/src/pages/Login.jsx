@@ -15,8 +15,8 @@ export default function Login() {
 return (
   <div className="h-screen flex items-center justify-center bg-gray-100">
     <form onSubmit={submit} className="p-8 bg-white rounded shadow-md w-80 flex flex-col items-center">
-      <img src={logo} alt="Logo" className="w-24 h-24 mb-6" />
-      <h2 className="mb-4 text-2xl">Login</h2>
+      <img src={logo} alt="Logo" className="w-40 h-40 mb-0" />
+      <h2 className="mb-2 text-2xl font-semibold text-gray-800">Login</h2>
       <h2 className="mb-4 text-1xl">Prospeccion de Ventas </h2>
 
       <input

@@ -101,7 +101,7 @@ export default function Dashboard() {
     <div className="p-8 bg-gray-100 min-h-screen">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
-        <img src={logo} alt="Logo" className="w-20 h-20" />
+        <img src={logo} alt="Logo" className="w-40 h-40" />
         <h1 className="text-3xl">Prospector de ventas </h1>
         <button
           onClick={logout}
