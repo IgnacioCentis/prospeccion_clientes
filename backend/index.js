@@ -11,16 +11,21 @@ const scrapeController = require('./controllers/scrape');
 const generateController = require('./controllers/generate');
 const auth = require('./middleware/auth');
 const sendController = require('./controllers/send');
-
 const upload = multer({ dest: 'uploads/' });
-
 const app = express();
+const assistantController = require('./controllers/assistant');
+
+
 app.use(cors());
 app.use(express.json());
 
 // Auth
 app.post('/auth/register', authController.register);
 app.post('/auth/login', authController.login);
+
+//Agente
+
+app.post('/assistant', auth, assistantController.chatWithAssistant);
 
 // Leads
 //app.post('/upload', auth, upload.single('file'), leadsController.upload);

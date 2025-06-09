@@ -6,6 +6,7 @@ import FileUpload from '../components/FileUpload';
 import LeadsTable from '../components/LeadsTable';
 import { Eye, Mail, Loader } from 'lucide-react'; // <-- importamos Loader
 import logo from '../assets/logo.png';
+import ChatWidget from '../components/ChatWidget';
 
 
 export default function Dashboard() {
@@ -165,7 +166,9 @@ export default function Dashboard() {
             </button>
           </div>
         </div>
-      )}
+      )}<ChatWidget />
+      
     </div>
+
   );
 }
