@@ -5,7 +5,7 @@ import api from '../services/api';
 import FileUpload from '../components/FileUpload';
 import LeadsTable from '../components/LeadsTable';
 import { Eye, Mail, Loader } from 'lucide-react'; // <-- importamos Loader
-import logo from '../assets/logo.png';
+import logo from '../assets/logo2.png';
 import ChatWidget from '../components/ChatWidget';
 
 
@@ -100,17 +100,18 @@ export default function Dashboard() {
   return (
     <div className="p-8 bg-gray-100 min-h-screen">
       {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <img src={logo} alt="Logo" className="w-40 h-40" />
-        <h1 className="text-3xl">Prospector de ventas </h1>
+      <div className="flex items-center justify-between bg-white p-4 rounded shadow mb-6">
+        <div className="flex items-center space-x-4">
+          <img src={logo} alt="Logo" className="h-[100px] w-auto" />
+          
+        </div>
         <button
           onClick={logout}
-          className="bg-red-500 text-white p-2 rounded hover:bg-red-600 transition"
+          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition"
         >
           Logout
         </button>
       </div>
-
       {/* Upload */}
       <FileUpload onUpload={loadLeads} />
 
